@@ -1,0 +1,118 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fafb, #e0f7fa);
+  transition: background 0.5s;
+}
+
+.home-container:hover {
+  background: linear-gradient(135deg, #e0f7fa, #f9fafb);
+}
+
+.home-profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-profile-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #4b6cb7, #182848, #4b6cb7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 5s infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #64748b;
+}
+
+.home-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #475569;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.home-cv-button {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  margin-top: 1.5rem; /* Added margin to create space between social media links and button */
+}
+
+.light .home-cv-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dark .home-container {
+  background: linear-gradient(135deg, #212121, #212121); /* Dark background gradient */
+}
+
+.dark .home-title {
+  background: linear-gradient(90deg, #d8d8da, #b4b4c4, #d8d8da); /* Dark gradient for title */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ffffff; /* Ensure text color is set for dark mode */
+}
+
+.dark .home-subtitle {
+  color: #e1dfdf; /* Dark color for subtitle */
+}
+
+.dark .home-description {
+  color: #f2f2f2; /* Dark color for description */
+}
+
+.dark .home-cv-button {
+  background-color: #4a4d51; /* Dark color for button */
+}
+
+/* Ensuring text visibility in both light and dark modes */
+.light .home-title, .dark .home-title {
+  color: #ffffff; /* Ensuring the gradient text is visible */
+}
+
+.light .home-subtitle, .dark .home-subtitle {
+  color: #64748b;
+}
+
+.light .home-description, .dark .home-description {
+  color: #475569;
+}

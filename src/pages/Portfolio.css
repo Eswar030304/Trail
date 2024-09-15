@@ -1,0 +1,59 @@
+/* src/pages/Portfolio.css */
+.portfolio-container {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+
+.portfolio-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+.portfolio-item {
+  background-color: var(--item-bg-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-item-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.portfolio-item-description {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Dark Mode */
+.dark .portfolio-container {
+  background-color: var(--dark-bg-color);
+}
+
+.dark .portfolio-title,
+.dark .portfolio-item-title,
+.dark .portfolio-item-description {
+  color: var(--dark-text-color);
+}
+
+.dark .portfolio-item {
+  background-color: var(--dark-item-bg-color);
+}
